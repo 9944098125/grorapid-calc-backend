@@ -26,7 +26,9 @@ app.use(bodyParser.json());
 async function connectDB() {
   try {
     // connecting to database
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(
+      "mongodb+srv://srinivas:thisisasecret@cluster0.pll6b.mongodb.net/calculator"
+    );
     console.log("Successfully Connected to MongoDB datebase");
   } catch (err) {
     // if error comes while connecting to database throw err
